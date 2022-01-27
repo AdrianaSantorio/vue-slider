@@ -37,11 +37,12 @@ const app = new Vue ({
             }
         },
         startAutoplay () {
-            setInterval(goForward(), 4000);
+            setInterval(this.goForward, 4000);
         },
     },
-    created: startAutoplay(),
-    
-});
+    created(){
+        this.startAutoplay();
+    }
+});  
 
 
