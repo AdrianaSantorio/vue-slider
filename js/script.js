@@ -4,12 +4,6 @@ console.log('Vue ok', Vue);
 //per collegarlo con l' estensione
 Vue.config.devtools = true;
 
-//stampare le foto in pagina
-//stampare in pagina tanti puntini quante sono le immagini
-//collegare il current index all' index dell'immagine mostrata
-//creare currentindex
-//spostare il currentIndex dai puntini
-
 const app = new Vue ({
     el: '#root',
     data: {
@@ -29,6 +23,12 @@ const app = new Vue ({
             this.currentIndex = index;
             console.log(index);
             console.log(this.currentIndex);
+        },
+        goForward() {
+            this.currentIndex++;
+        },
+        goBack() {
+            this.currentIndex--;
         }
     }
 });

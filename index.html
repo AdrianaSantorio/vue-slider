@@ -22,7 +22,7 @@
       <div class="row">
         <!-- back arrow -->
         <div class="col-3 d-flex align-items-center justify-content-center">
-          <i class="fas fa-angle-left fa-4x"></i>
+          <i class="fas fa-angle-left fa-4x" @click="goBack()"></i>
         </div>
         <div class="col-6">
           <!-- slider -->
@@ -36,7 +36,7 @@
         </div>
         <div class="col-3 d-flex align-items-center justify-content-center">
           <!-- forward arrow -->
-          <i class="fas fa-angle-right fa-4x"></i>
+          <i class="fas fa-angle-right fa-4x" @click="goForward()" ></i>
         </div>
       </div>
     </div>
