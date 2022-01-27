@@ -27,12 +27,10 @@
         <div class="col-6">
           <!-- slider -->
           <div class="slider d-flex align-items-center">
-            <img class="img-fluid" v-for="image in images" :src="image" alt="" />
+            <img class="img-fluid" v-for="(image, index) in images" :src="image" alt="" v-if="isActive(index)">
             <div class="slider-dots">
-              <div class="dot mx-2 active"></div>
-              <div class="dot mx-2"></div>
-              <div class="dot mx-2"></div>
-              <div class="dot mx-2"></div>
+              <!-- dots -->
+              <div v-for="(image, index) in images" class="dot mx-2" :class="{active:isActive(index)}" @click="isCurrent(index)"></div>
             </div>
           </div>
         </div>
