@@ -35,8 +35,13 @@ const app = new Vue ({
             } else {
                 this.currentIndex--;
             }
-        }
-    }
+        },
+        startAutoplay () {
+            setInterval(goForward(), 4000);
+        },
+    },
+    created: startAutoplay(),
+    
 });
 
 
