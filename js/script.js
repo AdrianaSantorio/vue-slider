@@ -21,14 +21,20 @@ const app = new Vue ({
         },
         isCurrent(index) {
             this.currentIndex = index;
-            console.log(index);
-            console.log(this.currentIndex);
         },
         goForward() {
-            this.currentIndex++;
+            if (this.currentIndex === this.images.length -1) {
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex++;
+            }
         },
         goBack() {
-            this.currentIndex--;
+            if (this.currentIndex === 0) {
+                this.currentIndex = this.images.length -1;
+            } else {
+                this.currentIndex--;
+            }
         }
     }
 });
